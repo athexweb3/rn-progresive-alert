@@ -1,19 +1,29 @@
-import type { StyleProp, ViewStyle } from 'react-native';
+// RnProgresivealert.types.ts
+export type ProgressiveAlertTint =
+  | 'blue'
+  | 'red'
+  | 'green'
+  | 'orange'
+  | 'purple'
+  | 'gray'
+  | string;
 
-export type OnLoadEventPayload = {
-  url: string;
-};
+export interface ProgressiveAlertConfig {
+  title: string;
+  message: string;
+  tint?: ProgressiveAlertTint;
+  initialProgress?: number;
+  replaceIfPresented?: boolean;
+  cancelTitle?: string | null;
+  completeAutoDismiss?: boolean;
+}
 
-export type RnProgresiveAlertModuleEvents = {
-  onChange: (params: ChangeEventPayload) => void;
-};
+export interface ProgressiveAlertShowResult {
+  presented: boolean;
+}
 
-export type ChangeEventPayload = {
-  value: string;
-};
+export interface ProgressiveAlertDismissResult {
+  dismissed: boolean;
+}
 
-export type RnProgresiveAlertViewProps = {
-  url: string;
-  onLoad: (event: { nativeEvent: OnLoadEventPayload }) => void;
-  style?: StyleProp<ViewStyle>;
-};
+export type ProgressiveAlertEvent = 'onCancelled' | 'onCompleted';
