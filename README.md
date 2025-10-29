@@ -1,14 +1,12 @@
 # rn-progresive-alert
 
----
-
-## Overview 
-
 rn-progresive-alert lets React Native and Expo apps show a **native iOS progress alert**, perfect for long-running operations like uploads, downloads, or data processing. The alert uses iOS’s UIAlertController with an attached UIProgressView, exposing APIs for JS to control progress and listen for cancel/complete events. 
 
-**Supported Platforms:** 
-**iOS:** Full support _ 
-**Android:** Fallback / No-op (planned) 
+**Only Ios Supported** 
+
+## Preview
+![Preview](./public//preview.gif)
+
 
 ---
 

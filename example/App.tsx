@@ -33,7 +33,7 @@ export default function App() {
     // Simulate progress
     let p = 0;
     const interval = setInterval(async () => {
-      p += 0.1;
+      p += 0.14;
       if (p >= 1) {
         clearInterval(interval);
         await dismiss(); // dismiss when done
@@ -41,7 +41,7 @@ export default function App() {
         setProgress(p);
         await update(p);
       }
-    }, 500);
+    }, 400);
   };
 
   return (
@@ -51,13 +51,6 @@ export default function App() {
 
         <View style={styles.group}>
           <Button title="Show Alert" onPress={startAlert} />
-          <Text style={{ marginTop: 10 }}>
-            Progress: {(progress * 100).toFixed(0)}%
-          </Text>
-        </View>
-
-        <View style={styles.group}>
-          <Button title="Dismiss Alert" onPress={() => dismiss()} />
         </View>
       </ScrollView>
     </SafeAreaView>

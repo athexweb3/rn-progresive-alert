@@ -1,7 +1,7 @@
 {
   "name": "rn-progresive-alert",
-  "version": "0.1.0",
-  "description": "My new module",
+  "version": "0.1.3",
+  "description": "rn-progresive-alert lets React Native and Expo apps show a native iOS progress alert, perfect for long-running operations like uploads, downloads, or data processing. The alert uses iOS’s UIAlertController with an attached UIProgressView, exposing APIs for JS to control progress and listen for cancel/complete events. ",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
